@@ -1,3 +1,97 @@
-<h1>
-  <storong>Books</storong>
-</h1>
+<!DOCTYPE>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>WebCampBackendNew</title>
+  <link rel="stylesheets" href="../../assets/stylesheets/application.css">
+</head>
+
+<body>
+  <h1>
+    <storong>Books</storong>
+  </h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>リーダブルコード</td>
+        <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>トラブル知らずのシステム設計</td>
+        <td>システム設計の要点を図解で説明してくれます</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>たのしいRuby</td>
+        <td>Rybyの入門におすすめです</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>入門Git</td>
+        <td>gitについての基本操作から内部構造まで解説してくれます</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>アルゴリズム図鑑</td>
+        <td>アルゴリズムについてカラーイラストでしっかり解説してくれます</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>達人プログラマー</td>
+        <td>プログラマ入門者は必読！</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>データーベース実践入門</td>
+        <td>効率的なSQL文を教えてくれます</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>New Book</h2>
+  <form>
+    <div class="field">
+    <%= form_with model: @book, url:'/books', local:true do |f| %>
+    <h4>Title</h4>
+    <%= f.text_field :title %>
+    </div>
+    <div class="field">
+    <h4>Body</h4>
+    <%= f.text_area :body %>
+    </div>
+    <div class="action">
+    <%= f.submit 'Create Book' %>
+    <% end %>
+    </div>
+  </form>
+
+</body>
+
+</html>
+
