@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>WebCampBackendNew</title>
+  <link rel="stylesheets" href="../../assets/stylesheets/application.css">
+</head>
+
+<body>
+  <p id="notice">Book was successflly created.</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @book.title %>
+  </p>
+  <p>
+    <strong>Body:</strong>
+    <%= @book.body %>
+  </p>
+  <%= link_to "Edit", edit_book_path(@book) %>
+  <div>|</div>
+  <a href="/books">Back</a>
+</body>

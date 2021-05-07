@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>WebCampBackendNew</title>
+  <link rel="stylesheets" href="../../assets/stylesheets/application.css">
+</head>
+
+<body>
+<h1>Editing Book</h1>
+<form>
+<%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
+  <div class="field">
+    <label>Title</label>
+    <%= f.text_field :title %>
+    </div>
+  <div class="field">
+    <label>Body</label>
+    <%= f.text_area :body %>
+  </div>
+  <div class="action">
+    <%= f.submit 'Update Book' %>
+  </div>
+<% end %>
+</form>
+
+<a><%= link_to "Show", book_path(@book) %></a>
+<div>|</div>
+<a href="/books">Back</a>
+
+</body>
