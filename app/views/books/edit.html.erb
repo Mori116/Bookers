@@ -1,17 +1,11 @@
-<!DOCTYPE>
-<html lang="ja">
-
 <head>
-  <meta charset="UTF-8">
-  <title>WebCampBackendNew</title>
   <link rel="stylesheets" href="../../assets/stylesheets/application.css">
 </head>
 
 <body>
 <h1>Editing Book</h1>
-
   <div class="field">
-  <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
+  <%= form_with model: @book, local:true do |f| %>
   <h4 class="item">Title</h4>
   <%= f.text_field :title %>
   </div>

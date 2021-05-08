@@ -88,3 +88,7 @@ td {
 .item {
   font-family: normal;
 }
+
+.notice {
+  color: green
+}

@@ -1,9 +1,4 @@
-<!DOCTYPE>
-<html lang="ja">
-
 <head>
-  <meta charset="UTF-8">
-  <title>WebCampBackendNew</title>
   <link rel="stylesheets" href="../../assets/stylesheets/application.css">
 </head>
 
@@ -35,6 +30,16 @@
   </table>
 
   <h2>New Book</h2>
+
+  <% if @book.errors.any? %>
+    <h3><%= @book.errors.count %>error prohibited this book from being saved:</h3>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
     <div class="field">
     <%= form_with model: @book, local:true do |f| %>
     <h4>Title</h4>
@@ -50,6 +55,4 @@
     </div>
 
 </body>
-
-</html>
 

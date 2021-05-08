@@ -1,14 +1,14 @@
-<!DOCTYPE>
-<html lang="ja">
-
 <head>
-  <meta charset="UTF-8">
-  <title>WebCampBackendNew</title>
   <link rel="stylesheets" href="../../assets/stylesheets/application.css">
 </head>
 
 <body>
-  <p class="message">Book was successfully created.</p>
+  <div>
+    <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: key) %>
+    <% end %>
+    <!--投稿成功時のコメント表示-->
+  </div>
   <p>
     <strong>Title:</strong>
     <%= @book.title %>

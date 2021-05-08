@@ -1,8 +1,12 @@
 class BooksController < ApplicationController
   def create
     book = Book.new(book_params)
-    book.save
-    redirect_to "/books/#{book.id}"
+    if book.save
+      flash[:notice] = 'Book was successfully created.'
+      redirect_to "/books/#{book.id}"
+    else
+      render action: :index
+    end
   end
 
   def show
@@ -21,7 +25,7 @@ class BooksController < ApplicationController
   def update
     book = Book.find(params[:id])
     book.update(book_params)
-    redirect_to book_path(@book)
+    redirect_to book_path(book)
   end
 
   def destroy
