@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <p id="notice">Book was successflly created.</p>
+  <p class="message">Book was successfully created.</p>
   <p>
     <strong>Title:</strong>
     <%= @book.title %>
@@ -17,7 +17,10 @@
     <strong>Body:</strong>
     <%= @book.body %>
   </p>
-  <%= link_to "Edit", edit_book_path(@book) %>
-  <div>|</div>
-  <a href="/books">Back</a>
+  <div class="page1">
+    <%= link_to "Edit", edit_book_path(@book) %>
+  </div>
+  <div class="page1">｜</div>
+  <a class="page1" href="/books">Back</a>
+
 </body>
