@@ -1,22 +1,18 @@
-<head>
-  <link rel="stylesheets" href="../../assets/stylesheets/application.css">
-</head>
-
 <body>
 <h1>Editing Book</h1>
 
     <% if @book.errors.any? %>
-  <div id="error">
-      <h3>
-        <%= @book.errors.count %> errors prohibited this book from being saved:
-      </h3>
-    <ul id="error-message">
-        <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
+      <div id="error">
+          <h3>
+            <%= @book.errors.count %> errors prohibited this book from being saved:
+          </h3>
+        <ul id="error-message">
+            <% @book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+        </ul>
+      </div>
     <% end %>
-  </div>
 
   <div class="field">
     <%= form_with model: @book, local:true do |f| %>
