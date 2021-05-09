@@ -90,7 +90,13 @@ td {
 }
 
 .notice {
-  color: green
+  color: green;
+  margin: 33px;
+}
+
+.success {
+  color: green;
+  margin: 33px;
 }
 
 #error {
@@ -114,7 +120,7 @@ td {
 }
 
 div .field_with_errors {
-  background-color: #c00;
+  background-color: red;
   padding: 2px;
   display: table;
 }
