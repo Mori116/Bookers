@@ -20,7 +20,7 @@
   box-sizing: border-box;
 }
 
-body {
+body, ul {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -91,4 +91,34 @@ td {
 
 .notice {
   color: green
+}
+
+#error {
+  width: 450px;
+  border: 2px solid red;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error h3 {
+  font-size: 12px;
+  padding: 5px 5px 5px 15px;
+  color: #fff;
+  background-color: #c00;
+}
+
+#error-message {
+  font-size: 12px;
+  padding-left: 40px
+}
+
+div .field_with_errors {
+  background-color: #c00;
+  padding: 2px;
+  display: table;
+}
+
+.label {
+  display: block;
 }

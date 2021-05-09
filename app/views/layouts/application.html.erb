@@ -4,14 +4,20 @@
   <head>
     <meta charset="UTF-8" />
     <title>Bookers</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div>
+      <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: key) %>
+      <% end %>
+      <!--投稿成功時のコメント表示-->
+    </div>
     <%= yield %>
   </body>
 </html>
